@@ -4,7 +4,6 @@ package br.com.listrepositori.github.extensions
 import android.app.Activity
 import android.view.View
 import android.widget.ImageView
-import androidx.annotation.DrawableRes
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.listrepositori.github.R
@@ -31,23 +30,7 @@ fun View.changeVisibility(isVisible: Boolean) {
     }
 }
 
-fun ImageView.loadUrl(url: String?, @DrawableRes placeholder: Int? = null) {
-    /*
-    if (placeholder == null) {
-        Glide.with(context)
-            .load(url)
-            .apply( RequestOptions.circleCropTransform())
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .into(this)
-        return
-    }
-    Glide.with(context)
-        .load(url)
-        .into(this)
-
-     */
-
-
+fun ImageView.loadUrl(url: String?) {
     Picasso.get()
         .load(url)
         .placeholder(R.drawable.ic_account)
