@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_12">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/repository_name" />
+
+        <TextView
+            android:id="@+id/body"
+            style="@style/Title.SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="Descrição" />
+
+        <ImageView
+            android:id="@+id/account"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_user"
+            app:layout_constraintStart_toStartOf="@+id/body"
+            app:layout_constraintTop_toBottomOf="@+id/body"
+            tools:ignore="ContentDescription,UnknownIdInLayout" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Title.SubTitle"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:layout_marginLeft="@dimen/dimen_12"
+            android:maxWidth="@dimen/dimen_100"
+            app:layout_constraintBottom_toBottomOf="@+id/account"
+            app:layout_constraintLeft_toRightOf="@+id/account"
+            app:layout_constraintStart_toEndOf="@+id/account"
+            app:layout_constraintTop_toTopOf="@+id/account"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Usuário" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        style="@style/Divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

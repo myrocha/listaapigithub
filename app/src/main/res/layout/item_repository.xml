@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10"
+    android:background="?selectableItemBackground">
+
+
+    <TextView
+        android:id="@+id/repositoryName"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/repository_name" />
+
+    <TextView
+        android:id="@+id/repositoryDescription"
+        style="@style/Title.SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repositoryName"
+        tools:text="Descrição" />
+
+    <ImageView
+        android:id="@+id/branch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_24"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_branches"
+        app:layout_constraintStart_toStartOf="@+id/repositoryName"
+        app:layout_constraintTop_toBottomOf="@+id/repositoryDescription"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/forks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black_dark_2A2A2A"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/branch"
+        app:layout_constraintLeft_toRightOf="@+id/branch"
+        app:layout_constraintTop_toTopOf="@+id/branch"
+        tools:text="0" />
+
+    <ImageView
+        android:id="@+id/stars"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_24"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_star"
+        app:layout_constraintBottom_toBottomOf="@+id/branch"
+        app:layout_constraintLeft_toRightOf="@+id/forks"
+        app:layout_constraintTop_toTopOf="@+id/branch"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/starsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:textColor="@color/black_dark_2A2A2A"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/branch"
+        app:layout_constraintLeft_toRightOf="@+id/stars"
+        app:layout_constraintTop_toTopOf="@+id/branch"
+        tools:text="0" />
+
+    <ImageView
+        android:id="@+id/acount"
+        android:layout_width="@dimen/dimen_48"
+        android:layout_height="@dimen/dimen_48"
+        android:layout_marginRight="@dimen/dimen_28"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_user"
+        app:layout_constraintBottom_toTopOf="@+id/user"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/user"
+        style="@style/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/acount"
+        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintStart_toStartOf="@+id/acount"
+        app:layout_constraintTop_toTopOf="@+id/starsCount"
+        tools:text="usuário" />
+
+
+
+    <View
+        android:id="@+id/view"
+        style="@style/Divider"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/branch"
+        app:layout_constraintTop_toBottomOf="@+id/branch" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

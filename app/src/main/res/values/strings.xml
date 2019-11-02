@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">listrepositorygithub</string>
+    <string name="action_settings">Settings</string>
+    <string name="msg_error">Houve um error, por favor tente novamente mais tarde</string>
+    <string name="try_again">tentar novamente</string>
+    <string name="repository_name">Nome Repositório</string>
+    <string name="repository">Repositórios</string>
+    <string name="pull_request">Pull requests</string>
+</resources>
