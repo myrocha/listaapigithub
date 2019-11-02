@@ -25,7 +25,6 @@ class ListRepositoryViewModelRobotArrange {
     }
 
     fun mockUseCaseListPullRequestSuccess(useCase: ListPullRequestUseCase) {
-        //every { useCase.execute(any(), any()) } returns Single.just(listPullRequest)
         every { useCase.execute(any(), any()) } returns Single.just(listPullRequest)
     }
 
@@ -42,10 +41,6 @@ class ListRepositoryViewModelRobotAct {
     }
 
     fun fetchListPullRequest(subject: ListRepositoryViewModel, observer:Observer<StateResponse<List<PullRequest>>>) {
-    /*    subject.getListPullRequest().observeForever(observer)
-        subject.fetchListPullRequest2("", "")
-        subject.getListPullRequest().removeObserver(observer)*/
-
         subject.getListPullRequest().observeForever(observer)
         subject.fetchListPullRequest2("", "")
         subject.getListPullRequest().removeObserver(observer)
@@ -69,5 +64,3 @@ class ListRepositoryViewModelRobotAssert {
         subject.getListPullRequest().value.assertInstanceOf(StateError::class.java)
     }
 }
-
-

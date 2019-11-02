@@ -33,7 +33,7 @@ fun View.changeVisibility(isVisible: Boolean) {
 fun ImageView.loadUrl(url: String?) {
     Picasso.get()
         .load(url)
-        .placeholder(R.drawable.ic_account)
-        .error(R.drawable.ic_account)
+        .placeholder(R.drawable.icon_user)
+        .error(R.drawable.icon_user)
         .into(this);
 }
