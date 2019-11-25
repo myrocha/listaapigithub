@@ -6,11 +6,9 @@
   
   	Lista de repositório: Responsável por exibir a lista dos repositórios mais populares de Java;
   	Lista de pull request: Responsável por exibir a lista de pull request de um repositório selecionado na tela que lista os repositórios;
-  	  
- 
-	 
-         Visualização do pull request no browser: Responsável por exibir a página do Pull Request selecionado na tela que lista os pull request.
-	 Aplicou-se os seguintes testes unitários:
+        Visualização do pull request no browser: Responsável por exibir a página do Pull Request selecionado na tela que lista os pull request.
+        
+        Aplicou-se testes unitários na classe de view model para os casos de sucesso e erro das requisições. 
   		
 
 Arquitetura utilizada:
